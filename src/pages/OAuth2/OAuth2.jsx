@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
-import { useNavigate, useSearchParams } from "react-router-dom";
 import * as s from "./styles";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 function OAuth2() {
 	const navigate = useNavigate();
