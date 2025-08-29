@@ -46,10 +46,11 @@ export const removeBoard = async (boardId) => {
   }
 };
 
-// export const updateBoard = async (updateBoardData) => {
-//   try {
-    
-//   } catch (error) {
-    
-//   }
-// }
+export const updateBoardRequest = async (updateBoardData) => {
+  try {
+    const response = await instance.post("/board/update", updateBoardData);
+    return response;
+  } catch (error) {
+    return error.response;
+  }
+};
