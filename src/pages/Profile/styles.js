@@ -20,19 +20,11 @@ export const profileHeader = css`
   width: 100%;
   height: 200px;
   display: flex;
-  background-color: chocolate;
-`;
-
-export const profileMain = css`
-  width: 100%;
-  height: 500px;
-  background-color: cyan;
 `;
 
 export const profileImgBox = css`
-  width: 225px;
+  width: 250px;
   height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,12 +38,15 @@ export const profileImgBox = css`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    & > img {
+      width: 100%;
+    }
   }
 `;
 
-
 export const profileInfoBox = css`
-  width: calc(100% - 225px);
+  width: calc(100% - 250px);
   height: 100%;
   padding: 30px 40px;
   box-sizing: border-box;
@@ -67,7 +62,7 @@ export const profileInfoBox = css`
     gap: 15px;
 
     & > p {
-      margin: 0px;
+      margin: 0;
     }
 
     & > button {
@@ -81,4 +76,49 @@ export const profileInfoBox = css`
       cursor: pointer;
     }
   }
+`;
+
+export const profileBox = css`
+  width: 100%;
+  height: 500px;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
+`;
+
+export const profileTab = (tabChild) => css`
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #dbdbdb;
+  box-sizing: border-box;
+
+  & > ul {
+    display: flex;
+
+    & > li {
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      padding: 0 14px;
+      border-right: 1px solid #dbdbdb;
+      box-sizing: border-box;
+      color: #333;
+      cursor: pointer;
+
+      &:nth-child(${tabChild}) {
+        border-bottom: 1px solid white;
+      }
+
+      &:hover {
+        background-color: #f2f2f2;
+        font-weight: 600;
+      }
+    }
+  }
+`;
+
+export const profileMain = css`
+  width: 100%;
+  height: 460px;
 `;
