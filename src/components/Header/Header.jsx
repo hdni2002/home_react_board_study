@@ -14,9 +14,7 @@ function Header() {
   };
 
   const onClickLogout = () => {
-    localStorage.removeItem("accessToken");
     logout();
-    navigate("/");
   };
 
   return (

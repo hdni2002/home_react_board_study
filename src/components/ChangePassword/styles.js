@@ -11,6 +11,7 @@ export const container = css`
 export const inputBox = css`
   display: flex;
   flex-direction: column;
+  width: 40%;
   gap: 12px;
 
   & > button {
@@ -22,10 +23,19 @@ export const inputBox = css`
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 
-
-    &:hover{
+    &:hover {
       opacity: 0.8;
+    }
+  }
+  & > ul {
+    width: 100%;
+    padding-left: 20px;
+    box-sizing: border-box;
 
+    & > li {
+      list-style: disc;
+      font-size: 13px;
+      color: #dc3545;
     }
   }
 `;
