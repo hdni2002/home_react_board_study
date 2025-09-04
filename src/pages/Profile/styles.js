@@ -106,7 +106,7 @@ export const profileTab = (tabChild) => css`
       color: #333;
       cursor: pointer;
 
-      &:nth-child(${tabChild}) {
+      &:nth-of-type(${tabChild}) {
         border-bottom: 1px solid white;
       }
 

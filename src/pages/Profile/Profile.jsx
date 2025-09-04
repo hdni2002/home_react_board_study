@@ -82,7 +82,10 @@ function Profile() {
             ) : tab === "changepassword" ? (
               <ChangePassword />
             ) : (
-              <ChangeProfileImg oldProfileImg={principal.profileImg} />
+              <ChangeProfileImg
+                oldProfileImg={principal?.profileImg}
+                userId={principal?.userId}
+              />
             )}
           </div>
         </div>
